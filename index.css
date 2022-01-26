@@ -1,0 +1,179 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  font-size: 14px;
+  background: url("images/bg-desktop.png") no-repeat bottom hsl(229, 57%, 11%);
+}
+
+.content {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: auto 925px auto;
+  grid-template-rows: auto 230px auto;
+}
+
+.minicard {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+}
+
+.left {
+  background: hsl(228, 56%, 26%);
+  width: 365px;
+  height: 206px;
+  padding: 40px 40px;
+  border-radius: 10px 105px 10px 10px;
+  margin-right: 30px;
+}
+
+.icon-cover {
+  background-color: black;
+  width: 47px;
+  height: 47px;
+  padding: 0 0;
+  display: flex;
+  border-radius: 10px;
+  margin: 35px 17px 0 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  background: hsl(228, 56%, 26%);
+  position: relative;
+  top: 50px;
+  width: 570px;
+  height: 155px;
+  border-radius: 10px;
+  padding: 27px;
+}
+
+.right p {
+  color: white;
+  padding-left: 12px;
+  margin: 10px auto 14px auto;
+}
+
+span {
+  font-weight: bolder;
+}
+
+.note {
+  position: absolute;
+  top: -46px;
+  right: 43px;
+  background: white;
+  width: 180px;
+  height: 75px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.note p {
+  display: inline;
+  color: hsl(229, 7%, 55%);
+  margin: 0px 7px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0;
+}
+
+.note span {
+  color: black;
+  font-size: 39px;
+  margin: 8px 0px 0px 21px;
+}
+
+div.note::after {
+  position: absolute;
+  content: "";
+  right: 0px;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 90px solid white;
+  border-left: 95px solid transparent;
+  z-index: -1;
+}
+
+.storage-amount {
+  background: hsl(229, 57%, 11%);
+  height: 16px;
+  width: 450px;
+  margin-left: 15px;
+}
+
+i {
+  color: white;
+}
+
+.bg {
+  background-image: linear-gradient(to right, rgb(255, 158, 149), rgb(251, 77, 146));
+  flex: 0.75;
+}
+
+.footer p {
+  margin: 8px 12px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  grid-area: 3/1/3/4;
+  align-self: flex-end;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.attribution a {
+  color: white;
+}
+
+@media screen and (max-width:1000px) {
+  body {
+    background-image: url("images/bg-mobile.png");
+    background-size: cover;
+  }
+
+  .content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .minicard {
+    width: 365px;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+.left{
+  width: 340px;
+  margin: 0;
+}
+  .right {
+    width: 340px;
+  }
+
+  .storage-amount {
+    width: 285px;
+  }
+
+  .note {
+    top: 120px;
+    right: 85px;
+  }
+  div.note::after{
+    display: none;
+  }
+  .attribution {
+  align-self: center;
+}
+}
